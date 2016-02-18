@@ -1,0 +1,54 @@
+Add a Graphic plugin for SquirrelMail
+-------------------------------------
+Mark Motley, mmotley@la-mirada.net
+Paul Lesneiwski, pdontthink@angrynerds.com
+Ver 2.3, Sep 26 2004
+
+This plugin allows the administrator to add a custom graphic to the top 
+of the left-hand pane of the main Mailbox view.  The graphic will be 
+displayed immediately above the Folders list.  
+
+The graphic may be different for each domain you are hosting.  See
+config.php for more information and configuration instructions.
+
+The plugin supports resizing the width of the left-hand pane by the user.
+
+The graphic should be small (200x100, for instance) and it should probably
+be a Gif89a with transparent background to support different themes. 
+
+Make sure you modify the config.php file and specify the location of the
+graphic and the alternate tag (this is what is displayed if the picture
+doesn't load or when you hover the mouse over the image).  I would 
+recommend you put your graphic in the "images" directory.  If you do this, 
+just change the filename from "sm_logo.jpg" to your filename (the ../ stuff 
+will remain the same). 
+
+If you use the Virtual Host Login (vlogin) plugin and want to specify
+per-domain settings for this plugin in the vlogin configuration file,
+you may do so by using the setting names listed in the addgraphics
+sample configuration files.
+
+
+
+--CHANGE LOG----------------------------
+
+2.3     Added ability to make per-domain image settings in the Virtual
+        Host Login (vlogin) plugin
+
+2.2     Updated for new plugin version reporting API.
+        Added ability to use CSS style attributes on the image.  Thanks
+        to Manson Thomas <mt@mansonthomas.com> for the original idea 
+        and code.
+
+2.1	Added ability to make the image(s) clickable links.  Thanks to
+        Charton T. Sapinoso <charton@nigs.upd.edu.ph> for the original
+        idea and code.
+
+2.0	Updated to work with SquirrelMail version 1.4.
+        New setup.php format for better overall SquirrelMail performance.
+        Updated to work with Plugin Updates plugin.
+        Added ability to specify a different image per
+        each virtual domain.
+
+1.0	Initial Release, does it need any fixing?? :)
+

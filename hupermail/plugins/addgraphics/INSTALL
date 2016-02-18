@@ -1,0 +1,49 @@
+Installing the addgraphics Plugin
+=================================
+
+1) Start with untaring the file into the plugins directory.
+Here is a example for the 1.0 version of the addgraphics plugin.
+
+  $ cd plugins
+  $ tar -zxvf addgraphics.1.00-1.0.3.tar.gz
+
+2) Go into the addgraphics directory
+
+  $ cd addgraphics
+
+3) Copy the config.php.typical file that most suits your situation 
+   to config.php and edit config.php, making adjustments as you deem 
+   necessary. 
+
+  $ cp config.php.typical.virtual.domain config.php
+  $ vi config.php
+
+4) Then go to your config directory and run conf.pl.  Choose
+   option 8 and add the addgraphics plugin.  Save and exit.
+
+  $ cd ../../config
+  $ ./conf.pl
+
+5) Also, please verify that you have the "compatibility" plugin
+   installed.
+
+
+
+Upgrading Addgraphics
+=====================
+
+1) Start with untaring the file into the plugins directory.
+Here is a example for the 1.0 version of the addgraphics plugin.
+
+  $ cd plugins
+  $ tar -zxvf addgraphics.1.00-1.0.3.tar.gz
+
+2) Change into the addgraphics directory, check your config.php
+   file against the new version, to see if there are any new
+   settings that you must add to your config.php file.
+
+  $ diff -Nau config.php config.php.typical.virtual.domain
+
+   Or simply replace your config.php file with the provided sample
+   and reconfigure the plugin from scratch (see step 3 under the
+   installation procedure above).

@@ -1,0 +1,76 @@
+# $Id: change_pass.po 13719 2009-05-18 12:02:52Z jervfors $
+# POLISH change_pass plugin translation.
+# Copyright (c) 2003-2009 The SquirrelMail Project Team
+# Sebastian Turzyński <buzz@zamek.gda.pl>, 2003.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: change_pass\n"
+"POT-Creation-Date: 2003-09-12 12:12-0600\n"
+"PO-Revision-Date: 2003-09-30 13:20+0100\n"
+"Last-Translator: Sebastian Turzynski <buzz@zamek.gda.pl>\n"
+"Language-Team: Polish <squirrelmail-i18n@lists.sourceforge.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: options.php:36 setup.php:18
+msgid "Change Password"
+msgstr "Zmień hasło"
+
+#: options.php:77
+msgid "Closing Connection"
+msgstr "Zamykanie połączenia"
+
+#: options.php:137
+msgid "Connecting to Password Server"
+msgstr "Łączenie z serwerem haseł"
+
+#: options.php:141
+msgid "ERROR:"
+msgstr "Błąd:"
+
+#: options.php:52
+msgid "New Password"
+msgstr "Nowe hasło"
+
+#: options.php:51
+msgid "Old Password"
+msgstr "Stare hasło"
+
+#: options.php:173 setup.php:35
+msgid "Password changed successfully."
+msgstr "Hasło zostało zmienione pomyślnie."
+
+#: options.php:64
+msgid "Submit"
+msgstr "Potwierdź"
+
+#: setup.php:20
+msgid ""
+"This connects to your local Password Server to change your email password."
+msgstr "Łączy z lokalnym serwerem haseł aby zmienić hasło Twojego konta pocztowego."
+
+#: options.php:53
+msgid "Verify New Password"
+msgstr "Potwierdź nowe hasło"
+
+#: options.php:112
+msgid "You must also type in your new password in the verify box."
+msgstr "Musisz także wpisać nowe hasło w polu potwierdzenia."
+
+#: options.php:109
+msgid "You must type in a new password."
+msgstr "Musisz wpisać nowe hasło."
+
+#: options.php:106
+msgid "You must type in your old password."
+msgstr "Musisz wpisać stare hasło."
+
+#: options.php:115
+msgid "Your new password doesn't match the verify password."
+msgstr "Twoje nowe hasło nie odpowiada hasłu wpisanemu w polu potwierdzenia hasła."
+
+#: options.php:118
+msgid "Your old password is not correct."
+msgstr "Twoje stare hasło nie jest prawidłowe."

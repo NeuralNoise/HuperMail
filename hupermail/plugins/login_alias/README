@@ -1,0 +1,194 @@
+Login Alias plugin for SquirrelMail
+============================================================
+Ver 2.5, 2008/10/29
+
+
+Copyright (c) 2001 Jay Guerette <JayGuerette@pobox.com>
+Copyright (c) 2001 Tyler Akins
+Copyright (c) 2002 David Minor <dave@dminor.com>
+Copyright (c) 2002-2008 Paul Lesniewski <paul@squirrelmail.org>
+
+
+
+Description
+===========
+
+This plugin allows users to specify a optional personalized
+login alias by browsing to Options->Personal Information.  The
+alias can have spaces in it.  Once set, the user can log in
+using either their normal username or their alias.
+
+
+
+License
+=======
+
+This plugin is released under the GNU General Public
+License (see COPYING for details).
+
+
+
+Donations
+=========
+
+If you or your company make regular use of this software,
+please consider supporting Open Source development by
+donating to the authors or inquire about hiring them to
+consult on other projects.  Donation/wish list links for
+the author(s) are as follows:
+
+Paul Lesniewski: https://sourceforge.net/donate/index.php?user_id=508228
+
+
+
+Requirements
+============
+
+  * SquirrelMail version 1.2.1
+
+  * Compatibility plugin version 2.0.7 or above, unless
+    using SquirrelMail version 1.4.10+ or 1.5.2+
+
+
+
+Security Warning
+================
+
+While this plugin will prevent users from choosing an alias that
+overlaps another real username, it can only check for other users
+who have previously logged into SquirrelMail.  It has no means to
+query the mail system backend for other users, and it does not
+yet have the ability to predict usernames that will be created in
+the future.  If a new user account is created with the same name
+as an alias that is already in use, the new account will not be
+usable in SquirrelMail.  Therefore, your new account creation
+process must check the login_alias preferences set (in the
+preferences database under the username "login_alias", or in the
+"login_alias.prefs" file in the SquirrelMail data directory.
+
+
+
+Help Requests
+=============
+
+Before looking for help elsewhere, please try to help yourself:
+
+  * Look to see if others have already asked about the same issue.
+    There are tips and links for the best places to do this in
+    the SquirrelMail mailing list posting guidelines:
+    http://squirrelmail.org/wiki/MailingListPostingGuidelines
+    You should also try Google or some other search engine.
+
+  * If you cannot find any information about your issue, please
+    first mail your help request to the squirrelmail-plugins
+    mailing list.  Information about it can be found here:
+    http://lists.sourceforge.net/mailman/listinfo/squirrelmail-plugins
+    You MUST read the mailing list posting guidelines (see above)
+    and include as much information about your issue (and your
+    system) as possible.  Including configtest output, any debug
+    output, the plugin configuration settings you've made and
+    anything else you can think of to make it easier to diagnose
+    your problem will get you the most useful responses.  Inquiries
+    that do not comply with the posting guidelines are liable to
+    be ignored.
+
+  * If you don't get any replies on the mailing list, you are
+    welcome to send a help request to the authors' personal
+    address(es), but please be patient with the mailing list.
+
+
+
+TODO
+====
+
+  * Ideas?
+
+
+
+Credits
+=======
+
+Thanks to the following individuals for their contributions:
+
+   Christian Schneider <schneider_at_uni-dortmund.de>
+   Emerson <emereson_at_inetintl.com>
+
+
+
+Change Log
+==========
+
+  v2.5  2008/10/29  Paul Lesniewski <paul@squirrelmail.org>
+    * Code cleanup and reorganization
+    * Update for compatibility with SquirrelMail 1.5.2+
+    * Remove usage of Compatibility plugin version 1.x
+
+  v2.4  2005/02/08  Paul Lesniewski <paul@squirrelmail.org>
+    * Fixed incompatibility with SquirrelMail 1.4.4 where prefs
+      were being wiped out.  There is a small chance that this
+      fix is not backward compatible, possibly with SM 1.2.x;
+      if this is the case, either use v2.3 of this plugin (which
+      is functionally almost identical) or let me know and I can 
+      get it fixed for you.
+    * Now works correctly with hashed prefs directories
+    * login_alias.pref file is auto-created, no longer requires
+      manual creation at install time
+    * Updates to work with newest Vlogin plugin; if using Vlogin 
+      with this plugin, make sure you get at least version 3.6
+      of Vlogin, which was released at the same time as version 
+      2.4 of this plugin
+    * Correct internationalization
+    * Code cleanup
+
+  v2.3  2003/07/23  Paul Lesniewski <paul@squirrelmail.org>
+    * Checks new aliases against all current SquirrelMail users
+      to ensure none of them get locked out (but still could
+      clash with new/future users' usernames) (Many thanks to
+      Markus Neubauer <markus.neubauer@std-software.de> for
+      ideas and help)
+    * Removes login alias from all prefs when user deletes it
+      (previously it could not be removed)
+    * Small fix to retain vlogin compatibility.
+
+  v2.2  2003/07/23  Paul Lesniewski <paul@squirrelmail.org>
+    * Fix for when the domain name is part of your usernames and
+      you are using the vlogin plugin, such that someone in
+      "domain_1.com" can use an alias such as "jose" and not lock
+      out "jose@domain_2.com"
+
+  v2.1  2003/04/18  Paul Lesniewski <paul@squirrelmail.org>
+    * Updated to work when SquirrelMail prefs are stored in a
+      database (thanks to Marietta <marietta@burnside.powells.com>)
+    * Updated for new plugin version reporting API.
+
+  v2.0  2003/03/17  Paul Lesniewski <paul@squirrelmail.org>
+    * Updated for compatibility with SquirrelMail 1.4
+    * New setup.php format for better overall SquirrelMail performance
+
+  v1.3  2003/02/05  David Minor  <dave@dminor.com>
+    * register_globals=Off support added
+    * Updated to work with vlogin (virtual hosts) and password_forget
+      plugins (the only worry now would be that a login alias, if the
+      same as another user's real account name, would block that user
+      from logging in.)
+    * Updated for compatibility with "plugin updates" plugin
+    * Internationalized plugin output
+
+  v1.2  2002/12/10  David Minor  <dave@dminor.com>
+    * Change of alias removes old alias 
+    * Checks for matching alias and prompts users to try again if
+      alias already exists 
+
+  v1.1  2002/01/15  David Minor  <dave@dminor.com>
+    * Modified to work correctly with squirrelmail preference caching
+      and not mangle the user's preferences.
+
+  v0.3  2001/05/10  Tyler Akins
+    * Modified to play nicely with password_forget plugin load order
+
+  v0.2  2001/05/10  Tyler Akins
+    * Modified to play nicely with password_forget plugin
+
+  v0.1  2001/05/10  Tyler Akins
+    * Initial public release
+

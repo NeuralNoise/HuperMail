@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>Collage involving &lt;ellipse&gt; </title>
+	<polyline points="400,200 500,600 900,600 1000,200" fill="cyan" stroke="darkviolet"
+		stroke-width="30" stroke-linecap="round" stroke-opacity="0.7" stroke-linejoin="miter" />	
+	<polygon points="600,100 615,170 650,200 615,230 600,300 585,230 550,200 585,170"
+		fill="darkorange" fill-opacity="0.5" stroke="papayawhip"
+		stroke-width="20" stroke-opacity="0.7" stroke-linejoin="miter"/>
+
+	<path stroke="green" stroke-width="20" stroke-opacity="0.9" stroke-linejoin="miter" d="M 400 200 L 500 600 900 600 996 200 600 100 z" fill="green" fill-rule="evenodd" />
+
+	<path d="M 200,450 400,200 600,450 z
+M 350,420 350,320 450,320 450,420 z"
+fill="#ff8" stroke="black" stroke-width="15" fill-rule="evenodd"/>
+</svg>

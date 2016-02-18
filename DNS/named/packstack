@@ -1,0 +1,9 @@
+$TTL 1D
+@	IN SOA	@ rname.invalid. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+	IN 	NS www.packstack.com.
+www	IN	A	192.168.1.30

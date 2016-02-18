@@ -1,0 +1,13 @@
+$TTL 1D
+@	IN SOA	@ rname.invalid. (
+					0	; serial
+					1D	; refresh
+					1H	; retry
+					1W	; expire
+					3H )	; minimum
+	IN	NS	www.huper.com.
+1	IN	PTR	www.huper.com.
+2	IN	PTR	mail.huper.com.
+
+	IN	NS	www.cloudrain.com.
+3	IN	PTR	www.cloudrain.com.
